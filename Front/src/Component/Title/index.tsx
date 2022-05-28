@@ -1,17 +1,15 @@
-import React, { FC } from "react";
-import { Title } from "./style";
+import React, { FC } from 'react';
 
-interface Props {
-  
+interface TitleProps {
+  title: string;
 }
-const Example: React.FC<Props> = () => {
 
-
+const Title: FC<TitleProps> = ({ title }) => {
   return (
-    <Title>
-      a
-    </Title>
+    <>
+      <h1>{title}</h1>
+    </>
   );
 };
 
-export default Example;
+export default Title;
