@@ -5,7 +5,7 @@ export const Container = styled("div")<{ color: string }>`
 	background-color: ${(props) => props.color};
 	border-radius: 10px;
 	min-width: 45vw;
-	height: 60px;
+	height: 100px;
 	flex-direction: column;
 	padding: 10px 0px;
 	text-indent: 18px;
@@ -13,7 +13,7 @@ export const Container = styled("div")<{ color: string }>`
 `;
 
 export const TextBold = styled("p")`
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: bold;
 	margin: 5px 0px;
 `;

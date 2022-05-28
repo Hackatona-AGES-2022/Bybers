@@ -4,6 +4,7 @@ import history from "./history";
 import { SnackbarProvider } from "notistack";
 import MainPage from "./Pages/MainPage";
 import DayReport from "./Pages/DayReport";
+import NewTask from "./Pages/NewTask";
 
 function App(props) {
   /* Adicionar uma rota para um componente, nao esqueca de importa o componente
@@ -16,6 +17,7 @@ function App(props) {
           <Route exatc path="/" element={<Test />} />
           <Route exatc path="/main-page" element={<MainPage />} />
           <Route exatc path="/day-report" element={<DayReport />} />
+          <Route exatc path="/new-task" element={<NewTask />} />
         </Routes>
       </BrowserRouter>
     </SnackbarProvider>
