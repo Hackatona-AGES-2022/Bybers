@@ -5,7 +5,7 @@ export const Container = styled("div")`
 	background-color: ${(props) => props.color};
 	border-radius: 16px;
 	width: 100vw;
-	height: 75px;
+	height: 110vh;
 	flex-direction: column;
 	padding: 5px 0px 10px;
 	text-indent: 18px;

@@ -23,8 +23,8 @@ function NewTask() {
 
 	return (
 		<>
-			<Header />
 			<Container>
+				<Header />
 				<TextAlign>
 					<Title title="Criar tarefa" />
 				</TextAlign>
@@ -35,7 +35,7 @@ function NewTask() {
 				<TextAlign>
 					<Subtitle title="Tarefa" />
 				</TextAlign>
-				<TaskInfoInput color={"#ff9999"} />
+				<TaskInfoInput color={"#fadcc2"} />
 				<Bottom />
 			</Container>
 		</>
