@@ -1,6 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
+const userController = require("./routes/usersController");
+const userDayController = require("./routes/userDayController");
 
 const app = express();
 
@@ -18,10 +20,9 @@ database.once("connected", () => {
   console.log("Database Connected");
 });
 
-const userController = require("./routes/usersController");
+app.use("/api/user", userController);
+app.use("/api/user-days", userDayController);
 
-app.use("/api", userController);
-
-app.listen(3000, () => {
-  console.log(`Server Started at ${3000}`);
+app.listen(5000, () => {
+  console.log(`Server Started at ${5000}`);
 });
