@@ -15,7 +15,7 @@ const dataSchema = new mongoose.Schema({
   },
   roleId:{
     required: true,
-    type: Number,
+    type: mongoose.Schema.Types.ObjectId, ref: "Role",
   }
 });
 
