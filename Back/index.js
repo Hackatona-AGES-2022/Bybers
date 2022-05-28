@@ -4,9 +4,10 @@ const mongoose = require("mongoose");
 const userController = require("./routes/usersController");
 const userDayController = require("./routes/userDayController");
 const activityController = require("./routes/activityController");
+const cors = require("cors");
 
 const app = express();
-
+app.use(cors());
 app.use(express.json());
 
 const mongoString = process.env.DATABASE_URL;
