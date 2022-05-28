@@ -29,25 +29,20 @@ router.get("/getAllActivitiesByDay/:user_id", async (req, res) => {
 
 router.post("/create/:user_id", async (req, res) => {
   const filter = { user_id: req.params.user_id, date: req.body.date };
-  const update = { activities: req.body.activity };
+  const update = { $push: { activities: req.body.activity } };
   const options = { new: true };
-  const dayToSave = await User_Day.findOneAndUpdate(filter, update, options);
-
-  //   let dayToSave = null;
-  //   if (dayExistent.length > 0) {
-  //     dayToSave = dayExistent[0];
-  //     dayToSave.activities.append(req.body.activity);
-  //   } else {
-  //     dayToSave = new User_Day({
-  //       user_id: req.params.user_id,
-  //       date: req.body.date,
-  //       break: {
-  //         interval: 3600, // uma hora
-  //         duration: 300, // 5 minutos de pausa
-  //       },
-  //       activities: [req.body.activity],
-  //     });
-  //   }
+  let dayToSave = await User_Day.findOneAndUpdate(filter, update, options);
+  if (dayToSave == null) {
+    dayToSave = new User_Day({
+      user_id: req.params.user_id,
+      date: req.body.date,
+      break: {
+        interval: 3600, // uma hora
+        duration: 300, // 5 minutos de pausa
+      },
+      activities: [req.body.activity],
+    });
+  }
   try {
     const dataToSave = await dayToSave.save();
     res.status(200).json(dataToSave);
