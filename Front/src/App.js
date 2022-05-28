@@ -3,6 +3,7 @@ import Test from "./Pages/Test";
 import history from "./history";
 import { SnackbarProvider } from 'notistack';
 import MainPage from "./Pages/MainPage";
+
 function App(props) {
 	/* Adicionar uma rota para um componente, nao esqueca de importa o componente
      <Route exatc path="CAMINHO" element={<COMPONENTE/>} />

@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
-
-interface SubtitleProps {
+import {Subtitle} from './style';
+interface TitleProps {
   title: string;
 }
 
-const Subtitle: FC<SubtitleProps> = ({ title }) => {
+const TitleComponent: FC<TitleProps> = ({ title }) => {
   return (
     <>
-      <h1>{title}</h1>
+      <Subtitle>{title}</Subtitle>
     </>
   );
 };
 
-export default Subtitle;
+export default TitleComponent;

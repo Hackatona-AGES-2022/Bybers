@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const Title = styled("h3")`
+export const Subtitle = styled("h3")`
   display: flex;
 `;

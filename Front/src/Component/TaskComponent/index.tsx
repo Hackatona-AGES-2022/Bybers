@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Container,Text } from "./style";
+import { Container,Text,TextBold } from "./style";
 
 interface Props {
   name: string,
@@ -11,9 +11,9 @@ const Task: React.FC<Props> = ({name,time,color,  ...props }: Props) => {
 
   return (
     <Container color={color}>
-      <Text >
+      <TextBold >
         {name}
-      </Text>
+      </TextBold>
       <Text>
         {time}
       </Text>
