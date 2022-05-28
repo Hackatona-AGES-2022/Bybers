@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
-
+import {Title} from './style';
 interface TitleProps {
   title: string;
 }
 
-const Title: FC<TitleProps> = ({ title }) => {
+const TitleComponent: FC<TitleProps> = ({ title }) => {
   return (
     <>
-      <h1>{title}</h1>
+      <Title>{title}</Title>
     </>
   );
 };
 
-export default Title;
+export default TitleComponent;

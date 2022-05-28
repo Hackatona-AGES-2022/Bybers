@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
-export const Title = styled("h2")`
+export const Title = styled("h1")`
   display: flex;
+  font-weight:300;
+
 `;
