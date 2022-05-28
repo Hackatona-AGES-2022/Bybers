@@ -1,5 +1,5 @@
 import { useSnackbar } from 'notistack';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '../../Component/ButtonComponent';
 import Header from '../../Component/HeaderComponent';
 import Subtitle from '../../Component/Subtitle';
@@ -11,15 +11,28 @@ import {getDailyActivities} from '../../Service/Activity'
 
 function MainPage() {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
-  useEffect(   () => {
-    console.log(fetch() );
+  const [activities, setActivities] = useState<any>();
+  
+  useEffect(  () => {
+    async function fetch(){
+      let result =  await getDailyActivities();
+      const values = (result.data[0].activities.map( (activity:any) => ({description:activity.description, start:activity.time_start})));
+      console.log(values);
 
+      setActivities(values);
+    }
+    fetch();
 
   }, [])
 
-  async function fetch(){
-return await getDailyActivities();
-  }
+  function toTime(seconds:number) {
+    var date = new Date();
+    date.setSeconds(seconds);
+    console.log(seconds)
+    return date.toISOString().substr(11, 5);
+ }
+
+
   return (
     <>
     <Header />
@@ -42,9 +55,8 @@ return await getDailyActivities();
         </TextAlign>
 
         <GapContainer>
-          <Task color='#fadcc2' name='Fazer café da manhã' time='07:30 AM' />
-          <Task color='#d9f2f2' name='Organizar tarefas' time='07:30 AM' />
-          <Task color='#d9f2f2' name='Reunião do Projeto 03' time='07:30 AM' />
+        {activities ? (activities.map((activity: any) => <Task color='#fadcc2' name={activity.description} time={toTime(activity.start)} />)) :null}
+
         </GapContainer>
 
         <Bottom>

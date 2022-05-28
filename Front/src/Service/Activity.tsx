@@ -3,5 +3,9 @@ const id = '6291f52a5e055e42d43c7fa4'
 
 
 export async function getDailyActivities(){
-    return await axios.get(`activities/getAllActivitiesByDay/${id}`);
+    return await axios.get(`activities/getAllActivitiesByDay/${id}`, {
+        params:{
+            date:"2022-05-28"
+        }
+    });
 }
