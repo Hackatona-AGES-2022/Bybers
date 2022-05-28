@@ -1,14 +1,11 @@
-import { FormEvent, useState } from 'react';
-import Example from '../../Component/ExampleComponent';
+import React from 'react';
+import logo from './logo.svg';
+import SplitScreen from '../../Component/Test';
 
-
-
-export function Test() {
-
+function Test() {
   return (
-      <>
-    <Example color='A0E3E25E' label='Teste' time='3 horas' />
-      </>
-    
+<SplitScreen></SplitScreen>
   );
 }
+
+export default Test;
