@@ -5,14 +5,21 @@ export const Container = styled("div")<{ color:string}>`
   background-color: ${(props) => props.color};
   border-radius: 10px;
   width: 85vw;
-  height: 75px;
+  height: 60px;
   flex-direction:column;
   padding:10px 0px;
   text-indent: 18px;
+  justify-content:space-around;
 `;
 
 export const Text = styled("p")`
   font-size: 16px;
-  display:block;
-  margin:9px 0px;
+  margin:5px 0px;
+
+`
+
+export const TextBold = styled("p")`
+  font-size: 16px;
+  font-weight:bold;
+  margin:5px 0px;
 `

@@ -1,10 +1,11 @@
+import { useSnackbar } from 'notistack';
+import React, { useEffect } from 'react';
+function Test() {
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
-import React from 'react';
-import logo from './logo.svg';
 
-export function Test() {
   return (
 ""
   );
-
-  }
+}
+  export default Test;
