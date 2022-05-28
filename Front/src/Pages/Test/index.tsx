@@ -1,11 +1,7 @@
-import { useSnackbar } from 'notistack';
-import React, { useEffect } from 'react';
+import React from "react";
+
 function Test() {
-  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
-
-
-  return (
-""
-  );
+	return "";
 }
-  export default Test;
+
+export default Test;

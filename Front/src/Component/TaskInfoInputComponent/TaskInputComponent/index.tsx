@@ -12,7 +12,7 @@ const TaskInput: React.FC<Props> = ({
 }: Props) => {
 	return (
 		<Container>
-			<Text>{title}: </Text>
+			<Text>{title}</Text>
 			<Input type={type} />
 		</Container>
 	);

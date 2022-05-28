@@ -6,6 +6,7 @@ import Subtitle from "../../Component/Subtitle";
 import Task from "../../Component/TaskComponent";
 import Title from "../../Component/Title";
 import WeekDayComponentButton from "../../Component/WeekDayComponent";
+import TaskInput from "../../Component/TaskInfoInputComponent/TaskInputComponent";
 import {
   Bottom,
   Container,
@@ -17,7 +18,6 @@ import {
   p,
 } from "./style";
 import emoticons from "../../Assets/imgs/emoticon.svg";
-
 function DayReport() {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
@@ -40,8 +40,8 @@ function DayReport() {
         <ContainerSlider>
           <SliderComponent />
         </ContainerSlider>
-        <h4>O que aconteceu de importante hoje?</h4>
 
+        <TaskInput title="O que aconteceu de importante hoje?" />
         <Bottom>
           <Button text="Salvar relatório" onClick={null}></Button>
         </Bottom>
