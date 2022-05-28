@@ -5,6 +5,7 @@ import SliderComponent from "../../Component/SliderComponent";
 import Subtitle from "../../Component/Subtitle";
 import Task from "../../Component/TaskComponent";
 import Title from "../../Component/Title";
+
 import WeekDayComponentButton from "../../Component/WeekDayComponent";
 import TaskInput from "../../Component/TaskInfoInputComponent/TaskInputComponent";
 import {

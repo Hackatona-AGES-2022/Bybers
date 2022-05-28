@@ -12,12 +12,18 @@ import {
   GapContainer,
   TextAlign,
   WeekDayContainer,
+  Circle,
 } from "./style";
 import { getDailyActivities } from "../../Service/Activity";
+import { useNavigate } from "react-router-dom";
 
 function MainPage() {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const [activities, setActivities] = useState<any>();
+  let navigate = useNavigate();
+  function moveToPage() {
+    navigate("/day-report");
+  }
   function addTask() {
     return null;
   }
@@ -76,7 +82,7 @@ function MainPage() {
         <Circle onClick={addTask}>+</Circle>
 
         <Bottom>
-          <Button text="Finalizar o dia" onClick={null}></Button>
+          <Button text="Finalizar o dia" onClick={moveToPage}></Button>
         </Bottom>
       </Container>
     </>
