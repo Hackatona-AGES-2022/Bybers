@@ -6,7 +6,7 @@ interface Props {
   leftWeight: number;
   rightWeight: number;
 }
-const SplitScreen: React.FC<Props> = ({ children, ...props }: Props) => {
+const Example: React.FC<Props> = ({ children, ...props }: Props) => {
   const { leftWeight, rightWeight } = props;
 
   const [left, right] = children;
@@ -19,4 +19,4 @@ const SplitScreen: React.FC<Props> = ({ children, ...props }: Props) => {
   );
 };
 
-export default SplitScreen;
+export default Example;
