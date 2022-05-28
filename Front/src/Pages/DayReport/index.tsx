@@ -35,7 +35,7 @@ function DayReport() {
           <Subtitle title="Você descansou 2 horas hoje! Muito bem. Descanso é essencial" />
         </TextAlign>
         <GapContainer></GapContainer>
-        <h2>Como foi seu dia?</h2>
+        <h3>Como foi seu dia?</h3>
         <Image src={emoticons}></Image>
         <ContainerSlider>
           <SliderComponent />

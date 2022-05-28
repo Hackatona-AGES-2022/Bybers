@@ -19,6 +19,15 @@ export const GapContainer = styled("div")`
   gap: 10px;
 `;
 
+export const Circle = styled("div")`
+  width: 50px;
+  height: 50px;
+  border-radius: 180px;
+
+  background-color: #bcbccc;
+  margin-top: 24px;
+`;
+
 export const TextAlign = styled("span")`
   text-align: left;
   width: 100%;
