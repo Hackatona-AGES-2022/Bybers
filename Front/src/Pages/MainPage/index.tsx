@@ -1,5 +1,6 @@
 import { useSnackbar } from 'notistack';
 import Button from '../../Component/ButtonComponent';
+import Header from '../../Component/HeaderComponent';
 import Subtitle from '../../Component/Subtitle';
 import Task from '../../Component/TaskComponent';
 import Title from '../../Component/Title';
@@ -12,6 +13,7 @@ function MainPage() {
 
   return (
     <>
+    <Header />
       <Container>
         <TextAlign>
           <Title title='Bom dia, Vinícius!' />

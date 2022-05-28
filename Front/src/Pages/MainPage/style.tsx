@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Container = styled("div")`
   display: flex;
   background-color: ${(props) => props.color};
-  border-radius: 10px;
+  border-radius: 16px;
   width: 100vw;
   height: 75px;
   flex-direction:column;
-  padding:10px 0px;
+  padding:5px 0px 10px;
   text-indent: 18px;
   align-items:center;
 `;

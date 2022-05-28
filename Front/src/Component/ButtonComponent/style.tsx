@@ -9,13 +9,13 @@ export const ButtonStyle = styled("button")`
   border: 1px solid #f4f4f4;
   border-radius: 16px;
   justify-content: space-around;
-`;
-
-export const Text = styled("div")`
+  `;
+  
+  export const Text = styled("div")`
   display: flex;
+  font-weight:bold;
   align-items: center;
   font-style: normal;
-  font-weight: 700;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.75); 
 `;

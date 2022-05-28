@@ -6,12 +6,8 @@ export const Container = styled("div")`
 	justify-content: space-between;
 	margin: auto;
 	flex-direction: row;
-	padding: 25px;
-	position: absolute;
-	top: 0px;
+	padding: 25px 25px 0px 25px;
 	width: -webkit-fill-available;
-	height: 5vh;
-	box-shadow: 0px -5px 10px black;
 `;
 
 export const Image = styled("img")`
