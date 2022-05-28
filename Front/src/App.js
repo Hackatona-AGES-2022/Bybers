@@ -14,8 +14,7 @@ function App(props) {
     <SnackbarProvider maxSnack={3}>
       <BrowserRouter history={history}>
         <Routes>
-          <Route exatc path="/" element={<Test />} />
-          <Route exatc path="/main-page" element={<MainPage />} />
+          <Route exatc path="/" element={<MainPage />} />
           <Route exatc path="/day-report" element={<DayReport />} />
           <Route exatc path="/new-task" element={<NewTask />} />
         </Routes>
