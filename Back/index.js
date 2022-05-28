@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const userController = require("./routes/usersController");
 const userDayController = require("./routes/userDayController");
+const activityController = require("./routes/activityController");
 
 const app = express();
 
@@ -22,6 +23,7 @@ database.once("connected", () => {
 
 app.use("/api/user", userController);
 app.use("/api/user-days", userDayController);
+app.use("/api/activities", activityController);
 
 app.listen(5000, () => {
   console.log(`Server Started at ${5000}`);
