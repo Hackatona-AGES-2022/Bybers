@@ -1,14 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
-import SplitScreen from "../../Component/Test";
-import Button from "../../Component/ButtonComponent";
+
+import WeekDayComponentButton from "../../Component/WeekDayComponent";
+import { useNavigate } from "react-router-dom";
 
 function Test() {
+  const onClick = () => {};
   return (
     <div>
-      {" "}
-      <Button text="Finalizar dia"></Button>
-      <Button text="Continuar"></Button>;
+      <WeekDayComponentButton text="Segunda"></WeekDayComponentButton>
     </div>
   );
 }
