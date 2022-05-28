@@ -5,17 +5,17 @@ const dataSchema = new mongoose.Schema({
     required: true,
     type: Date,
   },
-  end_date:{
+  end_date: {
     required: true,
-    type: Date
+    type: Date,
   },
-  feedBacksIds:[
+  feedbacksIds: [
     {
-        required: true,
-        type: mongoose.Schema.Types.ObjectId, ref: "Feedback"
-      }
-  ]
-  
+      required: true,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Feedback",
+    },
+  ],
 });
 
 module.exports = mongoose.model("Report", dataSchema);
