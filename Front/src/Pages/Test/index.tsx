@@ -1,16 +1,10 @@
-import React from "react";
-import logo from "./logo.svg";
-import SplitScreen from "../../Component/Test";
-import Button from "../../Component/ButtonComponent";
+
+import React from 'react';
+import logo from './logo.svg';
+import Task  from '../../Component/TaskComponent';
 
 function Test() {
-  return (
-    <div>
-      {" "}
-      <Button text="Finalizar dia"></Button>
-      <Button text="Continuar"></Button>;
-    </div>
-  );
+  return ("");
 }
 
 export default Test;
