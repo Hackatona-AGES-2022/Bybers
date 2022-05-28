@@ -36,7 +36,6 @@ const dataSchema = new mongoose.Schema({
       time_start: {
         required: true,
         type: Number,
-        max: 86400 - 1,
       },
       time_end: {
         required: true,
