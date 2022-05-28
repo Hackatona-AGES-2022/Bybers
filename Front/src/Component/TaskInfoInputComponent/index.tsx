@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "./InputComponent";
+import TaskInput from "./TaskInputComponent";
 import { OutterContainer, InnerContainer } from "./style";
 
 interface Props {
@@ -8,10 +8,10 @@ interface Props {
 const TaskInfoInput: React.FC<Props> = ({ color }: Props) => {
 	return (
 		<OutterContainer color={color}>
-			<Input title="Titulo da Tarefa" />
+			<TaskInput title="Titulo da Tarefa: " />
 			<InnerContainer>
-				<Input type="datetime-local" title="Data inicial" />
-				<Input type="time" title="Duração" />
+				<TaskInput type="datetime-local" title="Data inicial: " />
+				<TaskInput type="time" title="Duração: " />
 			</InnerContainer>
 		</OutterContainer>
 	);
