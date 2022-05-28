@@ -5,11 +5,9 @@ interface Props {
   
 }
 const Example: React.FC<Props> = () => {
-
-
   return (
     <Title>
-      a
+      tyeste
     </Title>
   );
 };

@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
-import SplitScreen from '../../Component/Test';
+import Bibi from '../../Component/Title';
 
 function Test() {
   return (
-<SplitScreen></SplitScreen>
+    ''
   );
 }
 
