@@ -8,7 +8,7 @@ export const OutterContainer = styled("div")<{ color: string }>`
 	padding: 15px;
 	border: none;
 	border-radius: 15px;
-	margin-bottom: 10vh;
+	margin-bottom: 3vh;
 `;
 export const InnerContainer = styled("div")`
 	display: flex;
