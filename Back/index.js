@@ -1,18 +1,32 @@
-const express = require('express')
-const morgan = require('morgan')
-const cors = require('cors')
-const bodyParser = require('body-parser')
+require("dotenv").config();
+const express = require("express");
+const mongoose = require("mongoose");
+const userController = require("./routes/usersController");
+const userDayController = require("./routes/userDayController");
+const feedbackController = require("./routes/feedbackController");
+const reportController = require("./routes/reportController");
 
-const app = express()
+const app = express();
 
-app.use(morgan('dev'))
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(express.json())
-app.use(cors())  //aq tem coisa do servidor. Se não me engano é dominio de origem. Pesquisar pra entender Tmj
+app.use(express.json());
 
-let db = []
+const mongoString = process.env.DATABASE_URL;
+mongoose.connect(mongoString);
+const database = mongoose.connection;
 
+database.on("error", (error) => {
+  console.log(error);
+});
 
-app.listen(21262, () =>{
-    console.log('Express started at http://localhost:21262');
-})
+database.once("connected", () => {
+  console.log("Database Connected");
+});
+
+app.use("/api/user", userController);
+app.use("/api/user-days", userDayController);
+app.use("/api/feedbacks", feedbackController);
+app.use("/api/reports", reportController);
+
+app.listen(5000, () => {
+  console.log(`Server Started at ${5000}`);
+});
