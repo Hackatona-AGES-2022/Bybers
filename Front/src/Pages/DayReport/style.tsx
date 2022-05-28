@@ -45,7 +45,7 @@ export const ContainerSlider = styled("div")`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 45px;
+  margin-top: 75px;
 `;
 
 export const p = styled("p")`
