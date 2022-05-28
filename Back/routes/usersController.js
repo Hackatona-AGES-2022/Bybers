@@ -61,19 +61,6 @@ router.patch("/user/update/:id", async (req, res) => {
   }
 });
 
-router.patch("/user/update/:id", async (req, res) => {
-  try {
-    const id = req.params.id;
-    const updateData = req.body;
-    //const options = { new: true };
-
-    const result = await User.findByIdAndUpdate(id, updateData);
-    res.send(result);
-  } catch (error) {
-    res.status(400).json({ message: error.message });
-  }
-});
-
 router.delete("/user/delete/:id", async (req, res) => {
   try {
     const id = req.params.id;
