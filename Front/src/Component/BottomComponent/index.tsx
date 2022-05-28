@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Divider } from "./style";
 import { useNavigate } from "react-router-dom";
-import HomeIcon from "../../Assets/imgs/Shape.svg";
+import HomeIcon from "../../Assets/imgs/Home.svg";
 
 interface Props {}
 const Bottom: React.FC<Props> = ({ ...props }: Props) => {

@@ -9,7 +9,7 @@ export const Container = styled("div")`
 	bottom: 0px;
 	width: 100%;
 	height: 10vh;
-	box-shadow: 0px 5px 20px black;
+	box-shadow: 0px 5px 10px black;
 `;
 
 export const Divider = styled("div")`
