@@ -1,14 +1,11 @@
+import { flexbox } from "@mui/system";
 import styled from "styled-components";
 
 export const Container = styled("div")`
   display: flex;
-  background-color: ${(props) => props.color};
-  border-radius: 16px;
   width: 100vw;
   height: 75px;
   flex-direction: column;
-  padding: 5px 0px 10px;
-  text-indent: 18px;
   align-items: center;
 `;
 
@@ -21,7 +18,9 @@ export const GapContainer = styled("div")`
 
 export const TextAlign = styled("span")`
   text-align: left;
-  width: 100%;
+  width: 90%;
+  margin-top: 15px;
+  margin-bottom: 15px;
 `;
 
 export const Bottom = styled("div")`
@@ -33,4 +32,22 @@ export const WeekDayContainer = styled("div")`
   height: 300px;
   display: flex;
   gap: 10px;
+`;
+
+export const Image = styled("img")`
+  width: 100%;
+  border-color: #ffffff;
+  position: absolute;
+  top: 400px;
+`;
+
+export const ContainerSlider = styled("div")`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 45px;
+`;
+
+export const p = styled("p")`
+  weight: 30;
 `;
