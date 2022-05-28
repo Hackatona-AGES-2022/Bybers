@@ -3,11 +3,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const userController = require("./routes/usersController");
 const userDayController = require("./routes/userDayController");
+const activityController = require("./routes/activityController");
+const cors = require("cors");
 const feedbackController = require("./routes/feedbackController");
 const reportController = require("./routes/reportController");
 
 const app = express();
-
+app.use(cors());
 app.use(express.json());
 
 const mongoString = process.env.DATABASE_URL;
@@ -24,6 +26,7 @@ database.once("connected", () => {
 
 app.use("/api/user", userController);
 app.use("/api/user-days", userDayController);
+app.use("/api/activities", activityController);
 app.use("/api/feedbacks", feedbackController);
 app.use("/api/reports", reportController);
 

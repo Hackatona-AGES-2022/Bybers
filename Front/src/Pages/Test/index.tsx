@@ -1,10 +1,8 @@
+import React from "react";
+import TaskInfoInput from "../../Component/TaskInfoInputComponent";
 
-import React from 'react';
-import logo from './logo.svg';
+function Test() {
+	// return <TaskInfoInput color={"#ff9999"} />;
+}
 
-export function Test() {
-  return (
-""
-  );
-
-  }
+export default Test;

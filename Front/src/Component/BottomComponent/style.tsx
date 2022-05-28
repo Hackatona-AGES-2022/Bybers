@@ -5,11 +5,12 @@ export const Container = styled("div")`
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	position: absolute;
-	bottom: 0px;
+	background-color: white;
+	position: fixed;
+	bottom: 0;
 	width: 100%;
 	height: 10vh;
-	box-shadow: 0px 5px 20px black;
+	box-shadow: 0px 5px 10px black;
 `;
 
 export const Divider = styled("div")`
