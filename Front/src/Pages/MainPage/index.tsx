@@ -1,5 +1,5 @@
 import { useSnackbar } from "notistack";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../Component/ButtonComponent";
 import Header from "../../Component/HeaderComponent";
 import Subtitle from "../../Component/Subtitle";
@@ -8,7 +8,6 @@ import Title from "../../Component/Title";
 import WeekDayComponentButton from "../../Component/WeekDayComponent";
 import {
   Bottom,
-  Circle,
   Container,
   GapContainer,
   TextAlign,
@@ -18,16 +17,32 @@ import { getDailyActivities } from "../../Service/Activity";
 
 function MainPage() {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
-  useEffect(() => {
-    console.log(fetch());
-  }, []);
-
-  async function fetch() {
-    return await getDailyActivities();
-  }
-  async function addTask() {
+  const [activities, setActivities] = useState<any>();
+  function addTask() {
     return null;
   }
+
+  useEffect(() => {
+    async function fetch() {
+      let result = await getDailyActivities();
+      const values = result.data[0].activities.map((activity: any) => ({
+        description: activity.description,
+        start: activity.time_start,
+      }));
+      console.log(values);
+
+      setActivities(values);
+    }
+    fetch();
+  }, []);
+
+  function toTime(seconds: number) {
+    var date = new Date();
+    date.setSeconds(seconds);
+    console.log(seconds);
+    return date.toISOString().substr(11, 5);
+  }
+
   return (
     <>
       <Header />
@@ -48,9 +63,15 @@ function MainPage() {
         </TextAlign>
 
         <GapContainer>
-          <Task color="#fadcc2" name="Fazer café da manhã" time="07:30 AM" />
-          <Task color="#d9f2f2" name="Organizar tarefas" time="07:30 AM" />
-          <Task color="#d9f2f2" name="Reunião do Projeto 03" time="07:30 AM" />
+          {activities
+            ? activities.map((activity: any) => (
+                <Task
+                  color="#fadcc2"
+                  name={activity.description}
+                  time={toTime(activity.start)}
+                />
+              ))
+            : null}
         </GapContainer>
         <Circle onClick={addTask}>+</Circle>
 

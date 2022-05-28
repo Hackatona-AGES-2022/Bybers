@@ -4,7 +4,7 @@ const User_Day = require("../models/user_day");
 const router = express.Router();
 
 router.get("/getAllActivitiesByDay/:user_id", async (req, res) => {
-  const date = req.body.date;
+  const date = req.query.date;
   try {
     const data = await User_Day.find({
       $and: [
@@ -28,26 +28,11 @@ router.get("/getAllActivitiesByDay/:user_id", async (req, res) => {
 });
 
 router.post("/create/:user_id", async (req, res) => {
-  let dayExistent = await User_Day.find({
-    $and: [
-      {
-        user_id: {
-          $eq: req.params.user_id,
-        },
-      },
-      {
-        date: {
-          $eq: req.body.date,
-        },
-      },
-    ],
-  });
-  let dayToSave = null;
-  console.log(dayExistent.activities);
-  if (dayExistent.length > 0) {
-    dayToSave = dayExistent[0];
-    dayToSave.activities.append(req.body.activity);
-  } else {
+  const filter = { user_id: req.params.user_id, date: req.body.date };
+  const update = { $push: { activities: req.body.activity } };
+  const options = { new: true };
+  let dayToSave = await User_Day.findOneAndUpdate(filter, update, options);
+  if (dayToSave == null) {
     dayToSave = new User_Day({
       user_id: req.params.user_id,
       date: req.body.date,
