@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "./TaskInputComponent";
-import { OutterContainer, InnerContainer } from "./style";
+import { OutterContainer } from "./style";
 
 interface Props {
 	color: string;

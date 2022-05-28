@@ -1,5 +1,4 @@
-import { useSnackbar } from "notistack";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Header from "../../Component/HeaderComponent";
 import Subtitle from "../../Component/Subtitle";
 import Title from "../../Component/Title";
@@ -10,7 +9,6 @@ import TaskInfoInput from "../../Component/TaskInfoInputComponent";
 import Bottom from "../../Component/BottomComponent";
 
 function NewTask() {
-	const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 	//const { category, setCategory } = useState();
 
 	useEffect(() => {
