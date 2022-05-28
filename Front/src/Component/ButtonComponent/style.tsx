@@ -13,11 +13,9 @@ export const ButtonStyle = styled("button")`
 
 export const Text = styled("div")`
   display: flex;
-
   align-items: center;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.75); 
 `;

@@ -30,3 +30,8 @@ position:absolute;
 bottom: 0;
 margin-bottom:15px;
 `;
+export const WeekDayContainer = styled("div")`
+height: 300px;
+display:flex;
+gap: 10px;
+`;
