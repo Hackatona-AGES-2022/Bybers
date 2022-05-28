@@ -20,4 +20,5 @@ export const Input = styled("input")`
 	display: flex;
 	border: none;
 	border-radius: 15px;
+	box-shadow: 4px 4px 5px 0px #cccccc;
 `;
